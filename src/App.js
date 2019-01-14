@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-import MyComponent from "./components/MyComponent"
-import AnotherComponent from "./components/AnotherComponent"
+import {BrowserRouter as Router, Route, Switch, browserHistory} from 'react-router-dom';
+import Test from "./components/Test"
+import Search from "./components/search/Search"
+
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <MyComponent />
-        <AnotherComponent />
-      </div>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Search}/>
+            <Route path="/test" component={Test}/>
+            <Route />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
