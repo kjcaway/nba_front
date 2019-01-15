@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Search.module.css'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
