@@ -10,7 +10,7 @@ class List extends React.Component {
     render(){
         return (
             <div className={styles.container}>
-                <ul>
+                <ul className={styles.mList}>
                     <li><ListItem /></li>
                     <li><ListItem /></li>
                     <li><ListItem /></li>

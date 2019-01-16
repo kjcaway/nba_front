@@ -1,6 +1,8 @@
 import React from 'react';
 import Search from './search/Search'
 import List from './listview/List'
+import Menu from './menu/Menu'
+import styles from './SearchTemplate.module.css'
 
 
 class SearchTemplate extends React.Component {
@@ -10,10 +12,13 @@ class SearchTemplate extends React.Component {
 
     render(){
         return (
-            <div>
-                <Search />
-                <List />
-            </div>
+            <React.Fragment>
+                <Menu />
+                <div className={styles.content}>
+                    <Search />
+                    <List />
+                </div>
+            </React.Fragment>
         )
     }
 }
