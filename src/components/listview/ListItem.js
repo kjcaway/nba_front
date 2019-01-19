@@ -10,7 +10,7 @@ class ListItem extends React.Component {
         return (
             <div className={styles.item}>
                 <label>Name : </label>
-                <span className={styles.fRight}>kangjongchan</span>
+                <span className={styles.fRight}>쭈쭈 사랑해 </span>
             </div>
         )
     }
