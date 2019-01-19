@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from './search/Search'
+import SearchContainer from '../containers/search/SearchContainer'
 import List from './listview/List'
 import common_styles from './Common.module.css'
 
@@ -12,8 +12,7 @@ class SearchTemplate extends React.Component {
     render(){
         return (
             <div className={common_styles.content}>
-                <Search />
-                <List />
+                <SearchContainer />
             </div>
         )
     }
