@@ -1,31 +1,31 @@
 .container {
-	min-width: 18rem;
-	max-width: 40rem;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top : 40px;
+  min-width: 18rem;
+  max-width: 40rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
 }
 
 .mList {
-	list-style: none;
+  list-style: none;
 }
 
 .mList li {
-	padding: 5px 0px 5px 5px;
-	margin-bottom: 5px;
-	border-bottom: 2px solid #efefef;
-	font-size: 14px;
+  padding: 5px 0px 5px 5px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #efefef;
+  font-size: 14px;
 }
 
 .mList li:last-child {
-	border-bottom: 0px;
+  border-bottom: 0px;
 }
 
-.mList li:hover{
-	background-color: aquamarine;
+.mList li:hover {
+  background-color: aquamarine;
 }
 
-.mList .fRight{
-	float: right;
-	padding-right: 10px;
+.mList .fRight {
+  float: right;
+  padding-right: 10px;
 }

@@ -1,53 +1,57 @@
-import React from 'react';
-import styles from './Search.module.css'
+import React, {Component}from "react";
+import styles from "./Search.module.css";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faSearch)
+library.add(faSearch);
 
-class Search extends React.Component {
-    constructor(props) {
-        super();
+class Search extends Component {
+  constructor(props) {
+    super();
 
-        this.state = {
-            keyword: ''
-        }
-    }
+    this.state = {
+      keyword: ""
+    };
+  }
 
+  onKeywordChange(e) {
+    this.setState({
+      keyword: e.target.value
+    });
+  }
 
-    onKeywordChange(e){
-        this.setState({
-            keyword : e.target.value
-        })
-    }
+  onBtnClick() {
+    let keyword = this.state.keyword;
 
-    onBtnClick() {
-        let keyword = this.state.keyword;
+    this.props.searchHandler(keyword).then(() => {
+      console.log("search handler called.");
+    });
+  }
 
-        this.props.searchHandler(keyword).then(
-            () => {
-                console.log("search handler called.")
-            }
-        )
-    }
-
-    render() {
-        return (
-            <div className={styles.wrap}>
-                <div className={styles.search}>
-                    <input type="text" className={styles.searchTerm} 
-                        placeholder="Write player name"
-                        value={this.state.keyword}
-                        onChange={this.onKeywordChange.bind(this)}/>
-                    <button type="submit" className={styles.searchButton} onClick={this.onBtnClick.bind(this)}>
-                        <FontAwesomeIcon icon="search" />
-                    </button>
-                </div>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className={styles.wrap}>
+        <div className={styles.search}>
+          <input
+            type="text"
+            className={styles.searchTerm}
+            placeholder="Write player name"
+            value={this.state.keyword}
+            onChange={this.onKeywordChange.bind(this)}
+          />
+          <button
+            type="submit"
+            className={styles.searchButton}
+            onClick={this.onBtnClick.bind(this)}
+          >
+            <FontAwesomeIcon icon="search" />
+          </button>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Search;

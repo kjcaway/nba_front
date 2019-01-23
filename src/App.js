@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Menu from "./components/menu/Menu"
+// import Menu from "./components/menu/Menu"
 import Test from "./components/Test"
 import SearchTemplate from "./components/SearchTemplate"
 
@@ -17,7 +17,6 @@ class App extends React.Component {
       <Provider store={store}>
         <Router>
           <React.Fragment>
-            <Menu />
             <Switch>
               <Route exact path="/" component={SearchTemplate}/>
               <Route path="/test" component={Test}/>
