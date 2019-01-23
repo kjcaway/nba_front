@@ -1,0 +1,19 @@
+.item {
+  padding: 5px 0px 5px 5px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #efefef;
+  font-size: 14px;
+}
+
+.item:last-child {
+  border-bottom: 0px;
+}
+
+.item:hover {
+  background-color: aquamarine;
+}
+
+.item .float-right {
+  float: right;
+  padding-right: 10px;
+}

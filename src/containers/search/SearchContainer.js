@@ -19,7 +19,8 @@ export class SearchContainer extends Component {
         }
       } else {
         console.log("FAIL!!");
-        alert("Please insert keyword (minimal 3)");
+        // alert("Please insert keyword (minimal 3)");
+        alert(this.props.postStatus.error)
       }
     });
   };

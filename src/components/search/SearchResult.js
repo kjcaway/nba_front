@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import styles from "./SearchResult.module.css";
+import SearchResultItem from "./SearchResultItem";
+
+import _ from "lodash";
 
 class SearchResult extends Component {
   shouldComponentUpdate(nextProps, nextState) {
@@ -8,30 +11,35 @@ class SearchResult extends Component {
   }
 
   render() {
-    console.log(this.props.data);
     const mapToComponents = data => {
-      return data.map((field, i) => {
-        return (
-          <li>
-            <div>
-              <label>1</label>
-              <span className={styles.fRight}>2</span>
-            </div>
-          </li>
-        );
+      let array = [];
+
+      _.forIn(data.data, (value, key) => {
+        const obj = {};
+        obj[key] = value;
+        array.push(obj);
+      });
+
+      return array.map((obj, idx) => {
+        const key = Object.keys(obj)[0];
+        const value = obj[key];
+
+        return <SearchResultItem key={idx} left={key} right={value} />;
       });
     };
 
     return (
-      <div className={styles.container}>
-        <ul className={styles.mList}>{mapToComponents(this.props.data)}</ul>
+      <div className={styles.result}>
+        <ul className={styles["result-list"]}>
+          {mapToComponents(this.props.data)}
+        </ul>
       </div>
     );
   }
 }
 
 SearchResult.defaultProps = {
-  data: []
+  data: {}
 };
 
 export default SearchResult;

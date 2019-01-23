@@ -1,31 +1,13 @@
-.container {
+.result {
   min-width: 18rem;
   max-width: 40rem;
   margin-right: auto;
   margin-left: auto;
   margin-top: 40px;
+  overflow-y: scroll;
+  height: 1000px;
 }
 
-.mList {
+.result-list {
   list-style: none;
-}
-
-.mList li {
-  padding: 5px 0px 5px 5px;
-  margin-bottom: 5px;
-  border-bottom: 2px solid #efefef;
-  font-size: 14px;
-}
-
-.mList li:last-child {
-  border-bottom: 0px;
-}
-
-.mList li:hover {
-  background-color: aquamarine;
-}
-
-.mList .fRight {
-  float: right;
-  padding-right: 10px;
 }

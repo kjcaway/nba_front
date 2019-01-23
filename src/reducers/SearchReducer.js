@@ -4,7 +4,8 @@ import update from "react-addons-update";
 const initialState = {
   post: {
     status: "INIT",
-    error: -1
+    error: -1,
+    message: ''
   },
   view: {
     status: "INIT",
@@ -39,7 +40,8 @@ export default function SearchReducer(state, action) {
       return update(state, {
         post: {
           status: { $set: "FAIL" },
-          error: { $set: -1 }
+          error: { $set: action.error },
+          message: { $set: action.message },
         }
       });
     default:

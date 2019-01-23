@@ -31,14 +31,14 @@ export function searchPost() {
 export function searchPostSuccess(res) {
   return {
     type: PLAYER_SEARCH_SUCCESS,
-    data: res.data.data
+    data: res.data
   };
 }
 
 export function searchPostFail(err) {
   return {
     type: PLAYER_SEARCH_FAIL,
-    error: err.error,
-    message: err.message
+    error: err,
+    message: err
   };
 }
