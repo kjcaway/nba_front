@@ -1,7 +1,7 @@
 .item {
   padding: 5px 0px 5px 5px;
   margin-bottom: 5px;
-  border-bottom: 2px solid #efefef;
+  border-bottom: 2px solid #709fe6;
   font-size: 14px;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .item:hover {
-  background-color: aquamarine;
+  background-color: rgb(107, 180, 209);
 }
 
 .item .float-right {

@@ -30,6 +30,15 @@ class Search extends Component {
     });
   }
 
+  onEnterPress(e) {
+    if (e.key === 'Enter') {
+      let keyword = this.state.keyword;
+      this.props.searchHandler(keyword).then(() => {
+        console.log("search handler called.");
+      });
+    }
+  }
+
   render() {
     return (
       <div className={styles.wrap}>
@@ -40,6 +49,7 @@ class Search extends Component {
             placeholder="Write player name"
             value={this.state.keyword}
             onChange={this.onKeywordChange.bind(this)}
+            onKeyPress={this.onEnterPress.bind(this)}
           />
           <button
             type="submit"

@@ -31,7 +31,7 @@ class Menu extends React.Component {
             <h3>Quick Look</h3>
             <ul>
               <li>
-                <NavLink exact to="#" title="Home">
+                <NavLink to="/" title="Home">
                   Home
                 </NavLink>
               </li>

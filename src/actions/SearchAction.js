@@ -38,7 +38,7 @@ export function searchPostSuccess(res) {
 export function searchPostFail(err) {
   return {
     type: PLAYER_SEARCH_FAIL,
-    error: err,
-    message: err
+    statusCode: err.response.status,
+    message: err.message
   };
 }

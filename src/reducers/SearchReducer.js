@@ -40,7 +40,7 @@ export default function SearchReducer(state, action) {
       return update(state, {
         post: {
           status: { $set: "FAIL" },
-          error: { $set: action.error },
+          error: { $set: action.statusCode },
           message: { $set: action.message },
         }
       });

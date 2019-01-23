@@ -13,14 +13,22 @@ export class SearchContainer extends Component {
   handleSearch = keyword => {
     return this.props.searchPostRequest(keyword).then(() => {
       if (this.props.postStatus.status === "SUCCESS") {
-        console.log("SUCCESS!! ===" + this.props.viewStatus.data);
-        if (this.props.viewStatus.data === undefined) {
+        console.log("SUCCESS!!");
+
+        if (this.props.viewStatus.data === '') {
           alert("No matching player.");
         }
       } else {
         console.log("FAIL!!");
-        // alert("Please insert keyword (minimal 3)");
-        alert(this.props.postStatus.error)
+        const status = this.props.postStatus.error;
+
+        if(status === 400){
+          alert("Please insert keyword (minimal 3)");
+        }else if(status === 500){
+          alert("Internal server Error!");
+        }else{
+          alert("Unknown Error = " + this.props.postStatus.message);
+        }
       }
     });
   };

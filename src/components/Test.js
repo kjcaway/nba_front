@@ -1,9 +1,29 @@
-import React from 'react';
-import styles from './Test.module.css';
-import common_styles from './Common.module.css';
+import React from "react";
+import Menu from "./menu/Menu";
+import Header from "./header/Header";
+import Banner from "./banner/Banner";
+import common_styles from "./Common.module.css";
 
-const Test = () => {
-  return <div className={common_styles.conatiner}><div className={styles.wrapper}>What about CSS Module?</div></div>;
-};
+class SearchTemplate extends React.Component {
+  constructor(props) {
+    super();
 
-export default Test;
+    this.state = {
+      title : "Test",
+      subtitle : "This is test page"
+    }
+  }
+
+  render() {
+
+    return (
+      <div className={common_styles.container}>
+        <Header />
+        <Banner title={this.state.title} subtitle={this.state.subtitle}/>
+        <Menu />
+      </div>
+    );
+  }
+}
+
+export default SearchTemplate;

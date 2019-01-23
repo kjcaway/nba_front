@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-// import Menu from "./components/menu/Menu"
 import Test from "./components/Test"
 import SearchTemplate from "./components/SearchTemplate"
 
