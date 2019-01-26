@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "../components/menu/Menu";
 import Header from "../components/header/Header";
 import Banner from "../components/banner/Banner";
-import common_styles from "./Common.module.css";
+import styles from "./Template.module.css";
 import {controllMenuBar} from '../common/common'
 
 class SearchTemplate extends React.Component {
@@ -22,7 +22,7 @@ class SearchTemplate extends React.Component {
   render() {
 
     return (
-      <div className={common_styles.container}>
+      <div className={styles.container}>
         <Header />
         <Banner title={this.state.title} subtitle={this.state.subtitle}/>
         <Menu />
