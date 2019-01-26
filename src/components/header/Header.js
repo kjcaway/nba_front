@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import styles from "./Header.module.css";
+import {controllMenuBar} from '../../common/common'
 
 export default class Header extends Component {
   clickHandler = () => {
-    document.body.classList.toggle(styles["panel-open"]);
-    document
-      .querySelector('[data-js="menu-toggle"]')
-      .classList.toggle(styles["open"]);
+    controllMenuBar();
   };
 
   render() {

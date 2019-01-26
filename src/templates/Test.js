@@ -1,8 +1,9 @@
 import React from "react";
-import Menu from "./menu/Menu";
-import Header from "./header/Header";
-import Banner from "./banner/Banner";
+import Menu from "../components/menu/Menu";
+import Header from "../components/header/Header";
+import Banner from "../components/banner/Banner";
 import common_styles from "./Common.module.css";
+import {controllMenuBar} from '../common/common'
 
 class SearchTemplate extends React.Component {
   constructor(props) {
@@ -12,6 +13,10 @@ class SearchTemplate extends React.Component {
       title : "Test",
       subtitle : "This is test page"
     }
+  }
+
+  componentDidMount(props){
+    controllMenuBar(true)
   }
 
   render() {

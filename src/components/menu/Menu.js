@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Menu.module.css";
-import header_styles from "../header/Header.module.css";
+import {controllMenuBar} from '../../common/common'
 
 class Menu extends React.Component {
   constructor(props) {
@@ -9,10 +9,7 @@ class Menu extends React.Component {
   }
 
   clickHandler = () => {
-    document.body.classList.remove(header_styles["panel-open"]);
-    document
-      .querySelector('[data-js="menu-toggle"]')
-      .classList.remove(header_styles["open"]);
+    controllMenuBar();
   };
 
   render() {

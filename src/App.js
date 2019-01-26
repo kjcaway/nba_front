@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Test from "./components/Test"
-import SearchTemplate from "./components/SearchTemplate"
+import Test from "./templates/Test"
+import SearchTemplate from "./templates/SearchTemplate"
 
 import { Provider } from 'react-redux';
 import configureStore from './store'
