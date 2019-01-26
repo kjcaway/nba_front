@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Search, SearchResult } from "../../components/search";
+import Spinner from '../../components/spinner/Spinner'
 import { searchPostRequest } from "../../actions/SearchAction";
 
 export class SearchContainer extends Component {
@@ -34,10 +35,19 @@ export class SearchContainer extends Component {
   };
 
   render() {
+    const loading = (
+      <Spinner />
+    );
+    const success = (
+      <SearchResult data={this.props.viewStatus.data} />
+    );
+
+    const result = this.props.viewStatus.status === 'LOADING'?loading:success;
+    
     return (
       <React.Fragment>
         <Search searchHandler={this.handleSearch.bind(this)} />
-        <SearchResult data={this.props.viewStatus.data} />
+        {result}
       </React.Fragment>
     );
   }

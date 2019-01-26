@@ -24,6 +24,9 @@ export default function SearchReducer(state, action) {
         post: {
           status: { $set: "WAITING" },
           error: { $set: -1 }
+        },
+        view : {
+          status: { $set: "LOADING" }
         }
       });
     case types.PLAYER_SEARCH_SUCCESS:
@@ -42,6 +45,9 @@ export default function SearchReducer(state, action) {
           status: { $set: "FAIL" },
           error: { $set: action.statusCode },
           message: { $set: action.message },
+        },
+        view : {
+          status: { $set: "INIT" }
         }
       });
     default:

@@ -26,8 +26,8 @@ class SearchTemplate extends React.Component {
       <div className={styles.container}>
         <Header />
         <Banner title={this.state.title} subtitle={this.state.subtitle}/>
-        <SearchContainer />
         <Menu />
+        <SearchContainer />
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React from "react";
 import Menu from "../components/menu/Menu";
 import Header from "../components/header/Header";
 import Banner from "../components/banner/Banner";
+import Spinner from "../components/spinner/Spinner";
 import styles from "./Template.module.css";
 import {controllMenuBar} from '../common/common'
 
@@ -26,6 +27,7 @@ class SearchTemplate extends React.Component {
         <Header />
         <Banner title={this.state.title} subtitle={this.state.subtitle}/>
         <Menu />
+        <Spinner />
       </div>
     );
   }
