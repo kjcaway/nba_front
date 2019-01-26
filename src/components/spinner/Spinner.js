@@ -3,7 +3,6 @@ import Loader from 'react-loader-spinner'
 import styles from './Spinner.module.css'
 
 export default class App extends React.Component {
-  //other logic
   render() {
     return (
       <div className={styles.spinner}>
