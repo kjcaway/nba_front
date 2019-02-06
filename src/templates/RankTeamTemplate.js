@@ -4,7 +4,7 @@ import Menu from "../components/menu/Menu";
 import Header from "../components/header/Header";
 import Banner from "../components/banner/Banner";
 import styles from "./Template.module.css";
-import {controllMenuBar} from '../common/common'
+import {controllMenuBar, getTodayDate} from '../common/common'
 
 class RankTeamTemplate extends React.Component {
   constructor(props) {
