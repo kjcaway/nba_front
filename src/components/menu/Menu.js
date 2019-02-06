@@ -33,8 +33,8 @@ class Menu extends React.Component {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/test" title="Test">
-                  Test
+                <NavLink to="/rankteam" title="Rank">
+                  Rank
                 </NavLink>
               </li>
               <li>
