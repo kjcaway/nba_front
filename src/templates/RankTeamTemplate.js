@@ -11,13 +11,14 @@ class RankTeamTemplate extends React.Component {
     super();
 
     this.state = {
-      title : "Team Rank",
-      subtitle : "2018-2019 Season"
+      title : "Rank of Teams",
+      subtitle : "2018-2019 Season",
     }
   }
 
   componentDidMount(props){
     controllMenuBar(true)
+
   }
 
   render() {
@@ -27,7 +28,7 @@ class RankTeamTemplate extends React.Component {
         <Header />
         <Banner title={this.state.title} subtitle={this.state.subtitle}/>
         <Menu />
-        <RankTeamContainer />
+        <RankTeamContainer date={getTodayDate()}/>
       </div>
     );
   }

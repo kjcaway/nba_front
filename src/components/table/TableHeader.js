@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
-import styles from './Table.module.css'
 
 export default class TableHeader extends Component {
   render() {
+    const mapToTh = data => {
+      console.log(data)
+      return data.map((colName, idx) => {
+        const column = colName;
+
+        return <th>{column}</th>
+      })
+    }
+    
     return (
       <tr>
-        <th>Movie Title</th>
-        <th>Genre</th>
-        <th>Year</th>
-        <th>Gross</th>
+        {mapToTh(this.props.column)}
       </tr>
     )
   }
