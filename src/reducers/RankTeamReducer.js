@@ -4,7 +4,8 @@ import update from "react-addons-update";
 const initialState = {
   view: {
     status: "INIT",
-    data: {}
+    data: {},
+    conf: 'east'
   }
 };
 
@@ -24,7 +25,8 @@ export default function RankTeamReducer(state, action) {
       return update(state, {
         view: {
           status: { $set: "SUCCESS" },
-          data: { $set: action.data }
+          data: { $set: action.data },
+          conf: { $set: 'east' }
         }
       });
     case types.RANK_TEAM_FAIL:

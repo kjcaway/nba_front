@@ -1,3 +1,4 @@
 import Table from "./Table";
+import Radio from "./Radio";
 
-export { Table };
+export { Table, Radio };

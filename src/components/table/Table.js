@@ -12,15 +12,21 @@ class Table extends Component {
   }
 
   render() {
+    const conf = this.props.conf;
+    const confMap = {
+      east : 'eastConfStandingsByDay',
+      west : 'westConfStandingsByDay'
+    }
+    console.log('Table conf :: ' + conf)
     const mapToComponentsHeader = data => {
-      const standingsArr = _.get(data.data, 'eastConfStandingsByDay', []);
+      const standingsArr = _.get(data.data, confMap[conf], []);
       const keyArr = Object.keys(_.defaultTo(standingsArr[0],{'No result found.':''}));
       
       return <TableHeader column={keyArr}/>
     }
 
     const mapToComponentsBody = data => {
-      const standingsArr = _.get(data.data, 'eastConfStandingsByDay', []);
+      const standingsArr = _.get(data.data, confMap[conf], []);
 
       return <TableBody data={standingsArr}/>
     }

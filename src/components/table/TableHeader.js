@@ -7,14 +7,16 @@ export default class TableHeader extends Component {
       return data.map((colName, idx) => {
         const column = colName;
 
-        return <th>{column}</th>
+        return <th key={'th'+idx}>{column}</th>
       })
     }
     
     return (
-      <tr>
-        {mapToTh(this.props.column)}
-      </tr>
+      <thead>
+        <tr>
+          {mapToTh(this.props.column)}
+        </tr>
+      </thead>
     )
   }
 }

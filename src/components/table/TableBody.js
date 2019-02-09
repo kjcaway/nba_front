@@ -7,23 +7,26 @@ export default class TableBody extends Component {
   render() {
     const mapToTd = data => {
       const row = data;
-      const rowToArr = _.values(row);
+      const rowToArr = _.values(row); // Object의 key : value 중 value를 array로 반환 
+
       return rowToArr.map((obj, idx) => {
         const columnData = obj;
 
-        return <td>{columnData}</td>
+        return <td key={'td'+idx}>{columnData}</td>
       })
     }
 
     const mapToTr = data => {
       return data.map((obj, idx) => {
-        return <tr>{mapToTd(obj)}</tr>
+        return <tr key={'tr'+idx}>{mapToTd(obj)}</tr>
       })
     }
 
     return (
       <React.Fragment>
-        {mapToTr(this.props.data)}
+        <tbody>
+          {mapToTr(this.props.data)}
+        </tbody>
       </React.Fragment>
     )
   }
