@@ -18,28 +18,30 @@ export class RankTeamContainer extends Component {
   
   pullData = date => {
     return this.props.getRankRequest(date).then(() => {
-      console.log('? pull Data');
     })
   }
 
   handleRadio = value => {
     this.props.viewStatus.conf = value;
-    console.log('viewStatus.conf : ' + this.props.viewStatus.conf);
-    this.forceUpdate();
+    this.forceUpdate(); // rerender
   }
 
   render() {
+    const conf = this.props.viewStatus.conf;
+    const data = this.props.viewStatus.data;
+    const status = this.props.viewStatus.status;
+
     const loading = (
       <Spinner />
     );
     const success = (
       <div>
-        <Radio conf={this.props.viewStatus.conf} radioHandler={this.handleRadio.bind(this)}/>
-        <Table conf={this.props.viewStatus.conf} data={this.props.viewStatus.data}/>
+        <Radio conf={conf} radioHandler={this.handleRadio.bind(this)}/>
+        <Table conf={conf} data={data}/>
       </div>
     );
 
-    const result = this.props.viewStatus.status === 'LOADING'?loading:success;
+    const result = (status === 'LOADING'?loading:success);
 
     return (
       <React.Fragment>

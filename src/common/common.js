@@ -1,6 +1,10 @@
 import header_styles from "../components/header/Header.module.css";
 import moment from 'moment';
 
+/**
+ * 메뉴바 표시 토글링 
+ * @param {boolean} isInit 
+ */
 export function controllMenuBar(isInit = false){
   if(isInit){
     document.body.classList.remove(header_styles["panel-open"]);

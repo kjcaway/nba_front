@@ -28,8 +28,8 @@ class Menu extends React.Component {
             <h3>Quick Look</h3>
             <ul>
               <li>
-                <NavLink to="/" title="Home">
-                  Home
+                <NavLink to="/" title="Search">
+                  Search
                 </NavLink>
               </li>
               <li>

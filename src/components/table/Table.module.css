@@ -2,6 +2,9 @@
 .result {
   overflow-y: auto;
   height: 500px;
+  min-width: 18rem;
+  max-width: 76rem;
+  margin: 0 auto;
 }
 
 .rwd-table {

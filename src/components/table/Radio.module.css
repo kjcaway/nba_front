@@ -15,6 +15,7 @@
     width: 1px;
     border: 0;
     overflow: hidden;
+    display:none;
 }
 
 .switch-field label {

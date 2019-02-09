@@ -35,14 +35,17 @@ export class SearchContainer extends Component {
   };
 
   render() {
+    const status = this.props.viewStatus.status;
+    const data = this.props.viewStatus.data;
+
     const loading = (
       <Spinner />
     );
     const success = (
-      <SearchResult data={this.props.viewStatus.data} />
+      <SearchResult data={data} />
     );
 
-    const result = this.props.viewStatus.status === 'LOADING'?loading:success;
+    const result = (status === 'LOADING'?loading:(status === 'SUCCESS' && data.length !== 0?success:undefined));
     
     return (
       <React.Fragment>
