@@ -22,6 +22,7 @@
 }
 .rwd-table td {
   display: block;
+  white-space: nowrap;
 }
 .rwd-table td:first-child {
   padding-top: .5em;
