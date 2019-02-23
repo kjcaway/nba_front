@@ -3,15 +3,16 @@
   overflow-y: auto;
   height: 500px;
   min-width: 18rem;
-  max-width: 76rem;
-  margin: 0 auto;
+  max-width: 56rem;
+  margin: 1rem auto;
+  background-color: #d7dde2;
+  border-radius: 15px;
+
 }
 
 .rwd-table {
-  margin: 1em 0;
+  margin: 0 auto;
   min-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .rwd-table tr {
   border-top: 1px solid #ddd;
@@ -76,4 +77,9 @@
 }
 .rwd-table th, .rwd-table td:before {
   color: #dd5;
+}
+
+
+img {
+  vertical-align: bottom;
 }

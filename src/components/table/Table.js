@@ -19,10 +19,11 @@ class Table extends Component {
     }
     console.log('Table conf :: ' + conf)
     const mapToComponentsHeader = data => {
-      const standingsArr = _.get(data.data, confMap[conf], []);
-      const keyArr = Object.keys(_.defaultTo(standingsArr[0],{'No result found.':''}));
-      
-      return <TableHeader column={keyArr}/>
+      // const standingsArr = _.get(data.data, confMap[conf], []);
+      // const keyArr = Object.keys(_.defaultTo(standingsArr[0],{'No result found.':''}));
+      const thArr = ['No', 'Team', 'Games', 'Win', 'Lose', '%', 'Home', 'Away'] // thead
+
+      return <TableHeader column={thArr}/>
     }
 
     const mapToComponentsBody = data => {
